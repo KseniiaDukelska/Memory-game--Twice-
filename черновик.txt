@@ -1,0 +1,363 @@
+if(option ==='normal') {
+        setTimeout(() => { 
+            resetCards();
+        }, 1500);
+    } else if(option ==='fast'){
+        setTimeout(() => { 
+            resetCards();
+        }, 1000);
+    } else{
+        setTimeout(() => { 
+            resetCards();
+        }, 500);
+    }
+
+function checkSpeed() {
+    //let option = document.getElementById('select').value;
+    
+    let selectSpeed= document.getElementById('select');
+    for (let index = 0; index < cards.length; index++) {
+        if(flippedCards === true){
+            selectSpeed.disabled = false;
+        } else{
+            selectSpeed.disabled = true;
+        }
+    }
+   }
+
+countMoves();
+    if(countRounds() === true){
+        countRound.innerHTML++;
+        countMove.innerHTML = 0;
+    }
+
+
+
+
+let countMove = document.getElementById('moves');
+let countRound = document.getElementById('round');
+
+function countMoves(){
+    if(!flippedCard){
+        countMove.innerHTML++;
+    }
+}
+
+function countRounds(){
+    for (let index = 0; index < cards.length; index++) {
+        if(cards[0].classList.contains('flipped') === true && cards[1].classList.contains('flipped') === true
+        && cards[2].classList.contains('flipped') === true && cards[3].classList.contains('flipped') === true
+        && cards[4].classList.contains('flipped') === true && cards[5].classList.contains('flipped') === true
+        && cards[6].classList.contains('flipped') === true){
+            return true;
+        } else{
+           return false;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let cards= document.querySelectorAll('.child_card');
+
+let flippedCard= false;
+let firstCard, secondCard;
+let blockCards = false;
+
+function flippedCards(){
+    /*if (blockCards) {
+        return;
+    }
+    if(this === firstCard){
+        return;
+    }
+    this.classList.toggle('fliped');
+    
+    if(!flippedCard){
+        flippedCard = true;
+        firstCard=this;
+        return;
+    }
+    flippedCard= false;
+    secondCard=this;*/
+    if (blockCards){
+        return;
+      }
+       
+      if (this === firstCard) {
+        return;
+      }
+      
+    
+      this.classList.add('flipped');
+    
+      if (!flippedCard) {
+        flippedCard = true;
+        firstCard = this;
+    
+        return;
+      }
+    
+      secondCard = this;
+
+    matchCards();
+    
+}
+
+function matchCards(){
+    blockCards = true;
+    
+    if(firstCard.dataset.name === secondCard.dataset.name){
+        setTimeout(() => { 
+            firstCard.classList.remove('flipped');
+            secondCard.classList.remove('fliped');
+            resetCards();
+        }, 1500);
+    } else{
+        firstCard.removeEventListener('click', flippedCards);
+        secondCard.removeEventListener('click', flippedCards);
+        //checkSpeed();
+        resetCards();
+    }
+}
+
+function resetCards(){
+    [flippedCard, blockCards]= [false, false];
+    [firstCard, secondCard]= [null, null];
+}
+
+
+(function shuffleCards(){
+    cards.forEach(card => {
+        let rand= Math.floor(Math.random() * 12);
+        card.style.order = rand;
+    });
+})();
+
+
+
+
+cards.forEach(card => {
+    card.addEventListener('click', flippedCards)
+});
+
+
+
+
+/*const cards = document.querySelectorAll('.child_card');
+
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  if (lockBoard){
+    return;
+  }
+   
+  if (this === firstCard) {
+    return;
+  }
+  
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }
+
+  secondCard = this;
+  checkForMatch();
+}
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+
+(function shuffleCards(){
+    cards.forEach(card => {
+        let rand= Math.floor(Math.random() * 12);
+        card.style.order = rand;
+    });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+*/
+
+
+
+
+
+
+
+
+
+
+
+.results{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: space-around;
+}
+.results h1{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    line-height: 85px;
+    font-weight: normal;
+
+}
+.results p{
+    text-align: center;
+}
+.select-speed select, 
+.button-give-up button{
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    background-color: #EBEBEB;
+}
+.button-give-up button:hover{
+    background-color: red;
+    color: white;
+    transition: 0.5s ;
+}
+.select-speed option{
+    text-align: center;
+}
+
+footer{
+    padding: 50px 0;
+}
+footer #footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer #footer h3, 
+#copyright p{
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+.line-1 {
+    height: 1px;
+    background: black;
+}
+#connect a{
+    text-decoration: none;
+    color:black;
+}
+#connect a:active{
+    color:#EBEBEB;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 5px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

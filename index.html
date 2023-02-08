@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory game</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Memory Game Twice addition</h1>
+    </header>
+    <div class="main-board">
+        <div class="main_box">
+            <div class="child_card" data-name="Jeon">
+               <img class="font" src="./img/jeon.jpg" alt="Jeon Twice Love">
+               <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Tzui">
+                <img class="font" src="./img/tzui.jpg" alt="Tzui Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jiho">
+                <img class="font" src="./img/jiho.jpg" alt="Jiho Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice"> 
+            </div>
+            <div class="child_card" data-name="Nayon">
+                <img class="font" src="./img/nayon.jpg" alt="Nayon Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Mina">
+                <img class="font" src="./img/mina.jpg" alt="Mina Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Momo">
+                <img class="font" src="./img/momo.jpg" alt="Momo Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Tzui">
+                <img class="font" src="./img/tzui.jpg" alt="Tzui Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jeon">
+                <img class="font" src="./img/jeon.jpg" alt="Jeon Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jiho">
+                <img class="font" src="./img/jiho.jpg" alt="Jiho Twice Love">
+                <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Mina">
+                <img class="font" src="./img/mina.jpg" alt="Mina Twice Love">
+               <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Nayon">
+                <img class="font" src="./img/nayon.jpg" alt="Nayon Twice Love">
+               <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Momo">
+                <img class="font" src="./img/momo.jpg" alt="Momo Twice Love">
+               <img class="back" src="./img/twice.jpg" alt="Twice">
+            </div>
+    </div>
+        <div class="time_move_block">
+            <div class="results">
+                <div class="moves">
+                    <h1 id="moves">0</h1>
+                    <p>moves</p>
+                </div>
+                <div class="played-rounds">
+                    <h1 id="round">0</h1>
+                    <p>rounds played</p>
+                </div>
+                <div class="select-speed">
+                    <select name="select" id="select" onchange="checkSpeed()">
+                        <option value="normal">normal</option>
+                        <option value="fast">fast</option>
+                        <option value="super-fast">super fast</option>
+                      </select>
+                      <p>speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="line"></div>
+        <div id="footer">
+            <div id="get-in-touch">
+                <h3>Get In Touch</h3>
+                <p>kseniaduk@gmail.com<br>
+                    +380957194530</p>
+            </div>
+            <div id="connect">
+                <h3>Connect</h3>
+                <p><a href="https://www.linkedin.com/in/kseniia-dukelska-12435822b/" target="_blank">LinkedIn</a><br>
+                    <a href="https://www.instagram.com/k_se__ni_a/" target="_blank">Instagram</a></p>
+            </div>
+            <div id="design-services">
+                <h3>Design Services</h3>
+                <p>49005 Dnipro, <br>
+                    Ukraine</p>
+            </div>
+            <div id="ventures">
+                <h3>Ventures</h3>
+                <p>49005 Dnipro, <br>
+                    Ukraine</p>
+            </div>
+        </div>
+        <div id="copyright">
+            <p>Copyright © 2021</p>
+        </div>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
