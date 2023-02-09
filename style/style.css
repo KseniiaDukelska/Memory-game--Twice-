@@ -7,8 +7,6 @@ body{
     font-weight: bold;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #fad0c4;
-    background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
     background-repeat: no-repeat;
     background-size: cover;
 }
