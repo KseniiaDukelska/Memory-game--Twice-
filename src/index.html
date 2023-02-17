@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Memory game</title>
-</head>
-<body>
-    <header class="header">
-        <!-- <h1>Memory Game Twice addition</h1> -->
-        <img class="header-logo" src="//cdn.shopify.com/s/files/1/0267/1371/8831/files/TWICE_Logo_Solo_x300.png?v=1675363294" alt="TWICE Official Store logo">
-        <nav class="">
-            <ul class="nav__links">
-                <li class=""><a href="#" class="">Home</a></li>
-                <li class=""><a href="#" class="">About TWICE</a></li>
-                <li class=""><a href="#" class="">GitHub</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="conta"><button>Contact</button></a>
-    </header>
+    @@include('html/head.html',{
+        "title":"Home",
+    })
+<body>   
+    @@include('html/header.html',{})
     <div class="main-board">
         <div class="main_box">
             <div class="child_card" data-name="Jeon">
@@ -92,34 +77,7 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="line"></div>
-        <div id="footer">
-            <div id="get-in-touch">
-                <h3>Get In Touch</h3>
-                <p>kseniaduk@gmail.com<br>
-                    +380957194530</p>
-            </div>
-            <div id="connect">
-                <h3>Connect</h3>
-                <p><a href="https://www.linkedin.com/in/kseniia-dukelska-12435822b/" target="_blank">LinkedIn</a><br>
-                    <a href="https://www.instagram.com/k_se__ni_a/" target="_blank">Instagram</a></p>
-            </div>
-            <div id="design-services">
-                <h3>Design Services</h3>
-                <p>49005 Dnipro, <br>
-                    Ukraine</p>
-            </div>
-            <div id="ventures">
-                <h3>Ventures</h3>
-                <p>49005 Dnipro, <br>
-                    Ukraine</p>
-            </div>
-        </div>
-        <div id="copyright">
-            <p>Copyright © 2021</p>
-        </div>
-    </footer>
-    <script src="game.js"></script>
+@@include('html/footer.html',{})
+    <!--<script src="js/game.js"></script>-->
 </body>
 </html>
