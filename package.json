@@ -21,5 +21,11 @@
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
   }
 }
