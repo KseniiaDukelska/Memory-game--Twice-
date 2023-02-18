@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+img.font, img.back {
+  border-radius: 20px;
+}
+
+.main-board {
+  border-radius: 30px;
+  /*box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);*/
+  width: 700px;
+  height: 900px;
+  margin: 0 auto;
+  background-color: #EBEBEB;
+}
+
+.main_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px;
+  width: 700px;
+  height: 700px;
+  perspective: 1000px;
+}
+
+.child_card {
+  width: calc(25% - 25px);
+  height: calc(33.333% - 10px);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: scale(1);
+}
+
+.child_card:active {
+  filter: opacity(70%);
+  transition: all 0.2s ease-out;
+}
+
+.font, .back {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.child_card.flip {
+  transform: rotateY(180deg);
+}
+
+.font {
+  transform: rotateY(180deg);
+}
+
+.time_move_block {
+  background: #F1A7F1;
+  border-radius: 10px;
+  height: 160px;
+  width: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);*/
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: space-around;
+}
+
+.results h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 85px;
+  font-weight: normal;
+}
+
+.results p {
+  text-align: center;
+}
+
+.select-speed select,
+.button-give-up button {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  background-color: #EBEBEB;
+}
+
+.button-give-up button:hover {
+  background-color: red;
+  color: white;
+  transition: 0.5s;
+}
+
+.select-speed option {
+  text-align: center;
+}
+
+footer {
+  padding: 50px 0;
+}
+
+footer #footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer #footer h3,
+#copyright p {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.line-1 {
+  height: 1px;
+  background: black;
+}
+
+#connect a {
+  text-decoration: none;
+  color: black;
+}
+
+#connect a:active {
+  color: #EBEBEB;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
