@@ -17,7 +17,8 @@ import {scss} from "./gulp/tasks/scss.js";
 
 
 function watcher(){
-  gulp.watch(path.watch.files, copy)
+ // gulp.watch(path.watch.files, copy)
+  gulp.watch(path.watch.img, copy)
   gulp.watch(path.watch.html, html)
   gulp.watch(path.watch.scss, scss)
 
