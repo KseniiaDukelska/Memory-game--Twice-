@@ -1,11 +1,68 @@
-ul.nav__links {
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  width: 100px;
+  height: 100px;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 16px 32px;
+}
+header ul.nav__links {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-ul.nav__links li a {
+header ul.nav__links li a {
   text-decoration: none;
-  color: black;
+  color: #000000;
+}
+header .hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+header .hamburger:hover span:nth-child(2) {
+  transform: translateX(5px);
+  background-color: #291CF6;
+}
+header .hamburger:hover span:nth-child(1) {
+  transform: translateX(-5px);
+  background-color: #291CF6;
+}
+header .hamburger:hover span:nth-child(3) {
+  transform: translateX(-5px);
+  background-color: #291CF6;
+}
+header .hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: black;
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+header nav {
+  display: none;
 }
 
 * {
