@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html',{
+        "title":"Home",
+    })
+<body>   
+    @@include('html/header.html',{})
+    <div class="main-board">
+        <div class="main_box"> 
+            <div class="child_card" data-name="Jeon">
+               <img class="font" src="@img/jeon.jpg" alt="Jeon Twice Love">
+               <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Tzui">
+                <img class="font" src="@img/tzui.jpg" alt="Tzui Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jiho">
+                <img class="font" src="@img/jiho.jpg" alt="Jiho Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice"> 
+            </div>
+            <div class="child_card" data-name="Nayon">
+                <img class="font" src="@img/nayon.jpg" alt="Nayon Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Mina">
+                <img class="font" src="@img/mina.jpg" alt="Mina Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Momo">
+                <img class="font" src="@img/momo.jpg" alt="Momo Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Tzui">
+                <img class="font" src="@img/tzui.jpg" alt="Tzui Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jeon">
+                <img class="font" src="@img/jeon.jpg" alt="Jeon Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Jiho">
+                <img class="font" src="@img/jiho.jpg" alt="Jiho Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Mina">
+                <img class="font" src="@img/mina.jpg" alt="Mina Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Nayon">
+                <img class="font" src="@img/nayon.jpg" alt="Nayon Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+            <div class="child_card" data-name="Momo">
+                <img class="font" src="@img/momo.jpg" alt="Momo Twice Love">
+                <img class="back" src="@img/twice.jpg" alt="Twice">
+            </div>
+    </div> 
+        <div class="time_move_block">
+            <div class="results">
+                <div class="moves">
+                    <h1 id="moves">0</h1>
+                    <p>moves</p>
+                </div>
+                <div class="played-rounds">
+                    <h1 id="round">0</h1>
+                    <p>rounds played</p>
+                </div>
+                <div class="select-speed">
+                    <select name="select" id="select" onchange="checkSpeed()">
+                        <option value="normal">normal</option>
+                        <option value="fast">fast</option>
+                        <option value="super-fast">super fast</option>
+                      </select>
+                      <p>speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+@@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+</body>
+</html>

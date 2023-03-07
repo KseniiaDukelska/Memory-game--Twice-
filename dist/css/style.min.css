@@ -6,25 +6,23 @@ header {
   justify-content: space-between;
 }
 header img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 header nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
   padding: 16px 32px;
 }
 header ul.nav__links {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 header ul.nav__links li a {
   text-decoration: none;
   color: #000000;
+  margin: 20px;
+  padding: 8px;
 }
 header .hamburger {
   display: block;
@@ -37,26 +35,30 @@ header .hamburger {
   background: none;
   cursor: pointer;
 }
+header .hamburger:hover span {
+  background-color: #e3e2ed;
+  transform: translateX(-5px);
+}
 header .hamburger:hover span:nth-child(2) {
   transform: translateX(5px);
-  background-color: #291CF6;
 }
-header .hamburger:hover span:nth-child(1) {
-  transform: translateX(-5px);
-  background-color: #291CF6;
+header .hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -3px) rotate(45deg);
 }
-header .hamburger:hover span:nth-child(3) {
-  transform: translateX(-5px);
-  background-color: #291CF6;
+header .hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+header .hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
 }
 header .hamburger span {
   display: block;
   width: 33px;
-  height: 4px;
+  height: 3px;
   margin-bottom: 5px;
   position: relative;
   background-color: black;
-  border-radius: 6px;
+  border-radius: 10px;
   z-index: 1;
   transform-origin: 0 0;
   transition: 0.4s;
@@ -65,6 +67,29 @@ header nav {
   display: none;
 }
 
+@media (min-width: 768px) {
+  header .hamburger {
+    display: none;
+  }
+  header nav {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  header ul.nav__links li :hover {
+    text-decoration: none;
+    background-color: #e3e2ed;
+    border-radius: 20px;
+  }
+  header img {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+  }
+  header img:hover {
+    background-color: transparent;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -200,7 +225,7 @@ footer #footer {
 
 footer #footer h3,
 #copyright p {
-  color: rgba(0, 0, 0, 0.4);
+  color: #e3e2ed;
   font-weight: bold;
 }
 
