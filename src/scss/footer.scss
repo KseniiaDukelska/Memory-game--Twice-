@@ -1,0 +1,34 @@
+footer{
+    padding: 50px 0;
+}
+footer #footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer #footer h3, 
+#copyright p{
+    color: $blue-color;
+    font-weight: bold;
+}
+.line-1 {
+    height: 1px;
+    background: black;
+}
+#connect a{
+    text-decoration: none;
+    color:black;
+}
+#connect a:active{
+    color:#EBEBEB;
+}
+
+span{
+    display: block;
+    max-width: 1280px;
+    height: 2px;
+    margin-bottom: 5px;
+    position:relative;
+    background-color: #e3e2ed;
+}
