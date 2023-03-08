@@ -404,3 +404,27 @@ img.font, img.back {
   text-decoration: none;
   cursor: pointer;
 }
+
+.summary {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: lighter;
+  padding: 50px 0;
+}
+.summary .h1 {
+  font-weight: 800;
+  font-size: 50pt;
+}
+.summary .button {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.summary .button a:hover {
+  letter-spacing: 2px;
+  transition: 300ms;
+}
+.summary img {
+  margin: 20px 20px;
+  width: 40px;
+}

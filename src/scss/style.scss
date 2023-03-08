@@ -3,6 +3,7 @@
 @import "footer";
 @import "gallery";
 
+
 *{
     box-sizing: border-box;
 }
@@ -152,4 +153,30 @@ img.font, img.back{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .summary{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:lighter;
+    padding: 50px 0;
+
+    .h1{
+        font-weight: 800;
+        font-size: 50pt;
+    }
+    .button{
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        a:hover{
+            letter-spacing: 2px;
+            transition: 300ms;
+        }
+    }
+    img{
+        margin: 20px 20px;
+        width: 40px;
+    }
+
   }
