@@ -4,28 +4,36 @@
         "title":"Home",
     })
 <body>   
+  <div class="contanier-content">
     @@include('html/header.html',{})
     <div class="summary">
         <div class="h1">Twice is a Kpop girl group formed in 2015 by JYP Entertainment.</div> 
         <br> 
-        The group consists of nine members: 
-        <a href="#">Nayeon</a>, 
-        <a href="#">Jeongyeon</a>, 
-        <a href="#">Momo</a>, 
-        <a href="#">Sana</a>, 
-        <a href="#">Jihyo</a>,
-        <a href="#">Mina</a>, 
-        <a href="#">Dahyun</a>,
-        <a href="#">Chaeyoung</a>, 
-        and  <a href="#">Tzuyu</a>. 
-        Twice has gained widespread popularity and critical acclaim for their catchy pop songs, intricate choreography, and bubbly personalities. 
-        The group has released several successful albums and singles, including "Fancy," "Feel Special," and "I Can't Stop Me." 
-        Twice has won numerous awards and nominations, including several Mnet Asian Music Awards and Seoul Music Awards. 
-        They have also gained a massive following on social media, with millions of fans worldwide. 
-        Twice is known for their strong vocal performances, captivating dance routines, and colorful music videos, 
-        and they continue to be one of the most popular Kpop groups of all time.
+        <div class="text">
+          The group consists of nine members: 
+          <a href="#">Nayeon</a>, 
+          <a href="#">Jeongyeon</a>, 
+          <a href="#">Momo</a>, 
+          <a href="#">Sana</a>, 
+          <a href="#">Jihyo</a>,
+          <a href="#">Mina</a>, 
+          <a href="#">Dahyun</a>,
+          <a href="#">Chaeyoung</a>, 
+          and  <a href="#">Tzuyu</a>. 
+          Twice has gained widespread popularity and critical acclaim for their catchy pop songs, intricate choreography, and bubbly personalities.  
+          Twice has won numerous awards and nominations, including several Mnet Asian Music Awards and Seoul Music Awards. 
+          They have also gained a massive following on social media, with millions of fans worldwide. 
+          Twice is known for their strong vocal performances, captivating dance routines, and colorful music videos, 
+          and they continue to be one of the most popular Kpop groups of all time.
+          <br>
+            Twice has won numerous awards throughout their career, including multiple daesangs (grand prizes) at major Korean music award shows.
+          They have a large and dedicated fanbase, known as "Once," who support the group both in Korea and internationally.
+          Twice has also gained popularity in Japan and has released several Japanese albums and singles.
+          The members of Twice are also known for their individual talents, such as singing, dancing, rapping, and acting.
+          Twice has been named the top K-pop girl group in terms of brand reputation by the Korean Business Research Institute multiple times.
+         </div>
         <br>
-        <div class="button"><a href="aboutTwice.html"><img src="@img/arrow-circle-right.png" alt="">Learn More</a></div>
+        <div class="button"><a href="aboutTwice.html"><img src="@img/arrow-circle-right.png" alt=""></a>Learn More</div>
     </div>
     <article class="flow">
         <h1>Members</h1>
@@ -97,7 +105,8 @@
           </ul>
         </div>
       </article>
-@@include('html/footer.html',{})
-    <script src="js/app.min.js"></script>
+  </div>
+  @@include('html/footer.html',{})
+  <script src="js/app.min.js"></script>
 </body>
 </html>

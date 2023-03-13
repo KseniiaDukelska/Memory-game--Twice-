@@ -6,15 +6,18 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 body{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
-    max-width: 1000px;
-    margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.contanier-content{ 
+    margin: 0 auto;
+    max-width: 1000px;
 }
 h1{
     text-align: center;
@@ -160,7 +163,12 @@ img.font, img.back{
     font-style: normal;
     font-weight:lighter;
     padding: 50px 0;
-
+    .text{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(43,43,43,1) 45%, rgba(0,0,0,0.17699579831932777) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
     .h1{
         font-weight: 800;
         font-size: 50pt;
@@ -169,14 +177,25 @@ img.font, img.back{
         display: flex;
         align-items: center;
         font-weight: 700;
-        a:hover{
+        width: fit-content;
+        &:hover{
             letter-spacing: 2px;
             transition: 300ms;
         }
     }
     img{
-        margin: 20px 20px;
+        margin: -10px 10px;
         width: 40px;
     }
 
   }
+  @media screen and (max-width:479px) {
+    /* Target portrait smartphones */
+    .summary .h1{
+        font-size: 20pt;
+    }
+}
+
+iframe{
+    margin: 50px 0;
+}

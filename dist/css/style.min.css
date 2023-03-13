@@ -36,20 +36,20 @@ header .hamburger {
   cursor: pointer;
 }
 header .hamburger:hover span {
-  background-color: #e3e2ed;
+  background-color: #b1aced;
   transform: translateX(-5px);
 }
 header .hamburger:hover span:nth-child(2) {
   transform: translateX(5px);
 }
 header .hamburger.is-active span:nth-child(1) {
-  transform: translate(0px, -3px) rotate(45deg);
+  transform: translate(1px, -3px) rotate(45deg);
 }
 header .hamburger.is-active span:nth-child(2) {
   opacity: 0;
 }
 header .hamburger.is-active span:nth-child(3) {
-  transform: translate(-3px, 3px) rotate(-45deg);
+  transform: translate(-3px, 4px) rotate(-45deg);
 }
 header .hamburger span {
   display: block;
@@ -78,7 +78,7 @@ header nav {
   }
   header ul.nav__links li :hover {
     text-decoration: none;
-    background-color: #e3e2ed;
+    background-color: #b1aced;
     border-radius: 20px;
   }
   header img {
@@ -91,42 +91,33 @@ header nav {
   }
 }
 footer {
-  padding: 50px 0;
-}
-
-footer #footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-footer #footer h3,
-#copyright p {
-  color: #e3e2ed;
-  font-weight: bold;
-}
-
-.line-1 {
-  height: 1px;
-  background: black;
-}
-
-#connect a {
-  text-decoration: none;
-  color: black;
-}
-
-#connect a:active {
-  color: #EBEBEB;
-}
-
-span {
-  display: block;
   max-width: 1280px;
-  height: 2px;
-  margin-bottom: 5px;
-  position: relative;
-  background-color: #e3e2ed;
+  background-color: #fff;
+  color: #292929;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 50px auto;
+  font-family: "Montserrat";
+}
+footer img {
+  width: 20px;
+  margin: 10px;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+footer .footer-logo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+footer .footer-bottom {
+  text-align: center;
+  margin: 20px;
 }
 
 ul {
@@ -187,6 +178,7 @@ ul {
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
+  margin: 8px;
 }
 .profile img {
   width: 100%;
@@ -240,21 +232,25 @@ ul {
 .profile:hover img,
 .profile:focus img {
   filter: grayscale(0);
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.05);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
-  max-width: 1000px;
-  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.contanier-content {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 h1 {
@@ -411,6 +407,12 @@ img.font, img.back {
   font-weight: lighter;
   padding: 50px 0;
 }
+.summary .text {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(43, 43, 43) 45%, rgba(0, 0, 0, 0.1769957983) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .summary .h1 {
   font-weight: 800;
   font-size: 50pt;
@@ -419,12 +421,23 @@ img.font, img.back {
   display: flex;
   align-items: center;
   font-weight: 700;
+  width: fit-content;
 }
-.summary .button a:hover {
+.summary .button:hover {
   letter-spacing: 2px;
   transition: 300ms;
 }
 .summary img {
-  margin: 20px 20px;
+  margin: -10px 10px;
   width: 40px;
+}
+
+@media screen and (max-width: 479px) {
+  /* Target portrait smartphones */
+  .summary .h1 {
+    font-size: 20pt;
+  }
+}
+iframe {
+  margin: 50px 0;
 }
