@@ -2,11 +2,13 @@
 @import "nav";
 @import "footer";
 @import "gallery";
+@import "aboutTwice";
 
 
 *{
     box-sizing: border-box;
     margin: 0;
+    
 }
 body{
     font-family: 'Raleway';
@@ -14,11 +16,10 @@ body{
     font-weight: bold;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.contanier-content{ 
     margin: 0 auto;
-    max-width: 1000px;
+    padding-top: 4em;
 }
+
 h1{
     text-align: center;
 }
@@ -157,7 +158,10 @@ img.font, img.back{
     text-decoration: none;
     cursor: pointer;
   }
-
+  .contanier-content{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   .summary{
     font-family: 'Montserrat';
     font-style: normal;

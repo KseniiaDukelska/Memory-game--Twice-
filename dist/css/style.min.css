@@ -1,9 +1,16 @@
 header {
-  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  height: 65px;
+  padding: 0 6%;
+  z-index: 9;
 }
 header img {
   width: 70px;
@@ -68,6 +75,9 @@ header nav {
 }
 
 @media (min-width: 768px) {
+  header {
+    margin: 0;
+  }
   header .hamburger {
     display: none;
   }
@@ -81,6 +91,9 @@ header nav {
     background-color: #b1aced;
     border-radius: 20px;
   }
+  header ul.nav__links li:focus {
+    background-color: #b1aced;
+  }
   header img {
     width: 30px;
     height: 30px;
@@ -88,6 +101,23 @@ header nav {
   }
   header img:hover {
     background-color: transparent;
+  }
+}
+/* Progress bar */
+#progress-bar {
+  --scrollAmount: 0%;
+  background-color: #b1aced;
+  width: var(--scrollAmount);
+  height: 8px;
+  position: fixed;
+  margin: 0;
+  z-index: 3;
+  top: 65px;
+}
+
+@media (min-width: 600px) {
+  #progress-bar {
+    height: 0.5rem;
   }
 }
 footer {
@@ -235,6 +265,25 @@ ul {
   transform: scale(1.05);
 }
 
+.contanier-content {
+  font-size: 14pt;
+  font-family: "Montserrat";
+}
+.contanier-content img#about {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+.contanier-content figcaption {
+  font-weight: 300;
+  color: grey;
+}
+
+blockquote {
+  font-size: 24pt;
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -246,11 +295,8 @@ body {
   font-weight: bold;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.contanier-content {
   margin: 0 auto;
-  max-width: 1000px;
+  padding-top: 4em;
 }
 
 h1 {
@@ -399,6 +445,11 @@ img.font, img.back {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.contanier-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .summary {
