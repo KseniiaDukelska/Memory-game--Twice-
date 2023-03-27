@@ -83,3 +83,22 @@ let processScroll = () => {
 }
 
 document.addEventListener('scroll', processScroll);
+
+//-------------iframe----------------
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  let element = document.getElementById('embed-iframe');
+  let readyToBe = {
+    height: '500px',
+      width:'50%',
+      uri: 'https://open.spotify.com/album/7hzP5i7StxYG4StECA0rrJ?si=y5Ug-9mDQdK2VUwh2GpGrA'
+    };
+    let callback = (EmbedController) => {
+      document.querySelectorAll('ul#episodes > li > button').forEach(
+        episode => {
+          episode.addEventListener('click', () => {
+            EmbedController.loadUri(episode.dataset.spotifyId)
+          });
+        })
+    };
+    IFrameAPI.createController(element, readyToBe, callback);
+};

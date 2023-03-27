@@ -182,7 +182,6 @@ ul {
 }
 
 .profile::before {
-  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.79) 0%, hsla(0, 0%, 0%, 0.787) 7.8%, hsla(0, 0%, 0%, 0.779) 14.4%, hsla(0, 0%, 0%, 0.765) 20.2%, hsla(0, 0%, 0%, 0.744) 25.3%, hsla(0, 0%, 0%, 0.717) 29.9%, hsla(0, 0%, 0%, 0.683) 34.3%, hsla(0, 0%, 0%, 0.641) 38.7%, hsla(0, 0%, 0%, 0.592) 43.3%, hsla(0, 0%, 0%, 0.534) 48.4%, hsla(0, 0%, 0%, 0.468) 54.1%, hsla(0, 0%, 0%, 0.393) 60.6%, hsla(0, 0%, 0%, 0.31) 68.3%, hsla(0, 0%, 0%, 0.216) 77.3%, hsla(0, 0%, 0%, 0.113) 87.7%, hsla(0, 0%, 0%, 0) 100%);
   transition: 300ms opacity linear;
 }
 
@@ -219,7 +218,6 @@ ul {
   margin: 0;
   z-index: -1;
   object-fit: cover;
-  filter: grayscale(1);
   transition: filter 200ms ease, transform 250ms linear;
 }
 .profile h2, .profile p {
@@ -270,7 +268,7 @@ ul {
   font-family: "Montserrat";
 }
 .contanier-content img#about {
-  max-width: 70%;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
 }
@@ -280,8 +278,43 @@ ul {
 }
 
 blockquote {
-  font-size: 24pt;
-  font-weight: 400;
+  font-weight: 500;
+  font-style: italic;
+}
+
+ul#episodes {
+  float: left;
+  margin: 0 10px;
+  padding: 0;
+  width: 35%;
+}
+
+ul#episodes > li {
+  list-style-type: none;
+}
+
+ul.episodes > button {
+  border-radius: 7px;
+  border: 0;
+  background: #191414;
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 3px 0;
+  width: 100%;
+  cursor: pointer;
+}
+ul.episodes > button:hover {
+  background: #1Db954;
+}
+
+.albums {
+  background-image: radial-gradient(at 30% 70%, rgba(140, 255, 142, 0.667) 0px, transparent 32%), radial-gradient(at 20% 50%, rgba(116, 149, 246, 0.7) 0px, transparent 50%), radial-gradient(at 35% 50%, rgba(255, 137, 235, 0.648) 0px, transparent 60%), radial-gradient(at 60% 55%, rgba(239, 128, 141, 0.7) 0px, transparent 50%), radial-gradient(at 80% 50%, rgba(233, 225, 114, 0.7) 0px, transparent 50%);
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
@@ -455,7 +488,7 @@ img.font, img.back {
 .summary {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: lighter;
+  font-weight: 500;
   padding: 50px 0;
 }
 .summary .text {
@@ -465,8 +498,8 @@ img.font, img.back {
   -webkit-text-fill-color: transparent;
 }
 .summary .h1 {
-  font-weight: 800;
-  font-size: 50pt;
+  font-weight: 700;
+  font-size: 45pt;
 }
 .summary .button {
   display: flex;

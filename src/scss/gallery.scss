@@ -32,25 +32,6 @@ ul{
   }
   
   .profile::before {
-    background: linear-gradient(
-      to top,
-      hsla(0, 0%, 0%, 0.79) 0%,
-      hsl(0 0% 0% / 0.787) 7.8%,
-      hsl(0 0% 0% / 0.779) 14.4%,
-      hsl(0 0% 0% / 0.765) 20.2%,
-      hsl(0 0% 0% / 0.744) 25.3%,
-      hsl(0 0% 0% / 0.717) 29.9%,
-      hsl(0 0% 0% / 0.683) 34.3%,
-      hsl(0 0% 0% / 0.641) 38.7%,
-      hsl(0 0% 0% / 0.592) 43.3%,
-      hsl(0 0% 0% / 0.534) 48.4%,
-      hsl(0 0% 0% / 0.468) 54.1%,
-      hsl(0 0% 0% / 0.393) 60.6%,
-      hsl(0 0% 0% / 0.31) 68.3%,
-      hsl(0 0% 0% / 0.216) 77.3%,
-      hsl(0 0% 0% / 0.113) 87.7%,
-      hsl(0 0% 0% / 0) 100%
-    );
     transition: 300ms opacity linear;
   }
   
@@ -90,7 +71,6 @@ ul{
       margin: 0;
       z-index: -1;
       object-fit: cover;
-      filter: grayscale(1);
       transition: filter 200ms ease, transform 250ms linear;
     }
     h2, p{

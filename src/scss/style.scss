@@ -3,6 +3,7 @@
 @import "footer";
 @import "gallery";
 @import "aboutTwice";
+@import "albums";
 
 
 *{
@@ -18,6 +19,7 @@ body{
     background-size: cover;
     margin: 0 auto;
     padding-top: 4em;
+    
 }
 
 h1{
@@ -165,7 +167,7 @@ img.font, img.back{
   .summary{
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight:lighter;
+    font-weight: 500;
     padding: 50px 0;
     .text{
         background: rgb(2,0,36);
@@ -174,8 +176,8 @@ img.font, img.back{
         -webkit-text-fill-color: transparent; 
     }
     .h1{
-        font-weight: 800;
-        font-size: 50pt;
+        font-weight: 700;
+        font-size: 45pt;
     }
     .button{
         display: flex;
