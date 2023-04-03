@@ -28,7 +28,7 @@
 <div id="progress-bar"></div>
     <div class="contanier-content">
     <div class="summary">
-        <div class="h1">Twice is a Kpop girl group formed in 2015 by JYP Entertainment.</div> 
+        <div class="h1">Twice is singing that that comes from the <span  class="fixed_text_1">soul</span> Seoul</div> 
         <br> 
         <div class="text">
           The group consists of nine members: 
@@ -121,29 +121,24 @@
         </div>
       </article>
   </div>
-    <div class="albums">
-      <div class="contanier-content album">
-        <h1>Albums</h1>
-      <div id="embed-iframe"></div>
-      <ul id="episodes">
-        <li>
-          <button data-spotify-id="https://open.spotify.com/album/7hzP5i7StxYG4StECA0rrJ?si=F-Yrh_HwQc297c81Co3BHg">
-            Ready To Be
-          </button>
-        </li>
-        <li>
-          <button data-spotify-id="https://open.spotify.com/album/5052Ip89wdW8EGdpjEpNeq?si=NBBCMF0QSci_vuDa2nOGGw">
-            Fromula of Love
-          </button>
-        </li>
-        <li>
-          <button data-spotify-id="https://open.spotify.com/album/3NZ94nQbqimcu2i71qhc4f?si=c1kb-YjlQK6dMxDTHJLLHg">
-            Between 1&2
-          </button>
-        </li>
-      </ul>
+      <div class="contanier-content">
+        <div class="form">
+        <h1>Contact us</h1>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <br>
+          <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+        <div id="status"></div>
+        
     </div>
-  
       </div>
   <footer>
     <div class="footer-top">
@@ -173,6 +168,5 @@
     </div>
   </footer>
   <script src="js/app.min.js"></script>
-  <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
 </body>
 </html>

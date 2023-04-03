@@ -102,3 +102,62 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
     };
     IFrameAPI.createController(element, readyToBe, callback);
 };
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('status');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent form from submitting
+
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  // validate inputs
+  if (nameInput.value.trim() === '') {
+    showError('Please enter your name');
+    return;
+  }
+
+  if (emailInput.value.trim() === '') {
+    showError('Please enter your email');
+    return;
+  }
+
+  if (!isValidEmail(emailInput.value.trim())) {
+    showError('Please enter a valid email address');
+    return;
+  }
+
+  if (messageInput.value.trim() === '') {
+    showError('Please enter your message');
+    return;
+  }
+
+  // submit form data
+  const formData = new FormData(form);
+  fetch('process-contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    showSuccess(data);
+    form.reset();
+  })
+  .catch(error => console.error(error));
+});
+
+function isValidEmail(email) {
+  // regex for validating email address format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function showError(message) {
+  status.innerHTML = `<p id="error-message">${message}</p>`;
+}
+
+function showSuccess(message) {
+  status.innerHTML = `<p>${message}</p>`;
+}

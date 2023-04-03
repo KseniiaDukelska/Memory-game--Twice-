@@ -282,38 +282,46 @@ blockquote {
   font-style: italic;
 }
 
-ul#episodes {
-  float: left;
-  margin: 0 10px;
-  padding: 0;
-  width: 35%;
+#contact-form label {
+  display: block;
+  margin-bottom: 10px;
 }
 
-ul#episodes > li {
-  list-style-type: none;
-}
-
-ul.episodes > button {
-  border-radius: 7px;
-  border: 0;
-  background: #191414;
-  color: #fff;
+#contact-form input[type=text],
+#contact-form input[type=email],
+#contact-form textarea {
+  display: block;
+  margin-bottom: 20px;
   padding: 10px;
-  margin: 0 0 3px 0;
+  border: none;
+  border-radius: 5px;
   width: 100%;
+  max-width: 400px;
+}
+
+#submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
-ul.episodes > button:hover {
-  background: #1Db954;
+
+#submit-btn:hover {
+  background-color: #3e8e41;
 }
 
-.albums {
+#error-message {
+  color: red;
+}
+
+.form {
   background-image: radial-gradient(at 30% 70%, rgba(140, 255, 142, 0.667) 0px, transparent 32%), radial-gradient(at 20% 50%, rgba(116, 149, 246, 0.7) 0px, transparent 50%), radial-gradient(at 35% 50%, rgba(255, 137, 235, 0.648) 0px, transparent 60%), radial-gradient(at 60% 55%, rgba(239, 128, 141, 0.7) 0px, transparent 50%), radial-gradient(at 80% 50%, rgba(233, 225, 114, 0.7) 0px, transparent 50%);
 }
 
-.album {
+.form {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
