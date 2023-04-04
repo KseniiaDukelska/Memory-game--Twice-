@@ -24,6 +24,7 @@ body{
 
 h1{
     text-align: center;
+    margin: 40px 0;
 }
 img.font, img.back{
     border-radius: 20px;
@@ -44,6 +45,7 @@ img.font, img.back{
     width: 700px;
     height: 700px;
     perspective: 1000px;
+    margin-top: 30px;
 }
 
 .child_card{
